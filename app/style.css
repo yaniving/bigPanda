@@ -1,0 +1,151 @@
+#box-wrapper-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  box-pack: start;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  width: 300px;
+  text-align: center;
+  border: 1px solid #D0C6C6;
+  margin: 0 auto; }
+  #box-wrapper-inner #box1 {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    -webkit-box-flex: 9;
+    -moz-box-flex: 9;
+    box-flex: 9;
+    background-color: #B1ABAB;
+    width: auto;
+    height: 170px; }
+    #box-wrapper-inner #box1 .submit {
+      background-color: #4A4AFF;
+      color: #FFF;
+      float: right;
+      margin-right: 35px;
+      border: 0;
+      border-radius: 3px;
+      font-size: 12px;
+      padding: 4px 9px;
+      width: 70px;
+      margin-top: 0;
+      font-weight: 600; }
+    #box-wrapper-inner #box1 input, #box-wrapper-inner #box1 textarea {
+      width: 220px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 21px;
+      padding: 3px; }
+    #box-wrapper-inner #box1 textarea {
+      resize: none;
+      height: 45px;
+      max-height: 100px; }
+  #box-wrapper-inner #box2 {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    margin-top: 20px; }
+    #box-wrapper-inner #box2 input {
+      width: 220px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 21px;
+      padding: 3px; }
+  #box-wrapper-inner #box3 {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    -webkit-box-flex: 9;
+    -moz-box-flex: 9;
+    box-flex: 9;
+    height: 200px;
+    overflow-y: scroll; }
+    #box-wrapper-inner #box3 .comment-box {
+      width: 250px;
+      height: 60px;
+      margin: 10px; }
+      #box-wrapper-inner #box3 .comment-box .profile-img > img {
+        width: 40px;
+        height: 40px;
+        float: left; }
+      #box-wrapper-inner #box3 .comment-box .comment-msg {
+        font-size: 12px;
+        float: left;
+        margin-left: 11px; }
+        #box-wrapper-inner #box3 .comment-box .comment-msg .email {
+          color: #000;
+          font-weight: 600; }
+        #box-wrapper-inner #box3 .comment-box .comment-msg .content {
+          color: grey;
+          float: left;
+          padding-top: 3px; }
+
+/*
+
+.comment-view{
+    width : 300px;
+    text-align: center;
+    border: 1px solid #D0C6C6;
+    .form{
+        background-color:#B1ABAB;
+        width: 250px;
+        height: 155px;
+
+        button{
+            background-color:#4A4AFF;
+            color:#FFF;
+            float: right;
+            margin-right: 22px;
+            border: 0;
+            border-radius: 3px;
+            font-size: 12px;
+            padding: 4px 9px;
+        }
+
+        input , textarea{
+            width: 200px;
+            margin-top:10px;
+            margin-bottom:10px;
+
+           font-size: 12px;
+           line-height: 21px;
+        }
+    }
+
+    .feed{
+        width: 250px;
+        .filter{
+            margin-top:20px;
+
+            input{
+                width: 200px;
+                margin-top:10px;
+                margin-bottom:10px;
+
+                font-size: 12px;
+                line-height: 21px;
+            }
+        }
+
+
+
+
+    }
+}*/
+
+/*# sourceMappingURL=style.css.map */

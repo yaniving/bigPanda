@@ -1,0 +1,33 @@
+
+<div  id="box-wrapper-inner">
+    <form ng-submit="submit()" class="form" id="box1">
+        <div>
+            <input placeholder="Email" ng-model="form.email">
+        </div>
+        <div>
+            <textarea placeholder="Message" ng-model="from.message"></textarea>
+        </div>
+        <div>
+            <input type="submit" id="submit" value="SUBMIT" class="submit" />
+        </div>
+
+
+    </form>
+
+    <div id="box2">
+        <input placeholder="Filter" ng-keyup="filter()" ng-model="filterText">
+    </div>
+    <div id="box3">
+            <div ng-repeat="message in messages" class="comment-box">
+                <span class="profile-img"><img ng-src="{{message.img}}"></span>
+                <span class="comment-msg">
+                    <div ng-bind="message.email" class="email"></div>
+                    <div ng-bind="message.msg" class="content"></div>
+                </span>
+            </div>
+    </div>
+
+
+
+
+</div>
