@@ -14,7 +14,7 @@ exports.get = function(req, res){
 };
 
 exports.getDelta = function(req, res){
-  Messages.find({},function(err, results) {
+  Messages.find({ _id: { $gt : req.params.delta} },function(err, results) {
     return res.send(results);
   });
 };
@@ -30,7 +30,7 @@ exports.add = function(req , res) {
 };
 
 exports.filter = function(req, res){
- Messages.find({ $or: [ { "email": req.params.filter }, { "msg": {$regex :new RegExp("/"+req.params.filter+"/" , 'i');  } } ] },function(err, results) {
+ Messages.find({ $or: [ { "email": {$regex :new RegExp(req.params.filter , 'i')  } }, { "msg": {$regex :new RegExp(req.params.filter, 'i')  } } ] },function(err, results) {
     return res.send(results);
   });
 }

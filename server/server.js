@@ -1,6 +1,6 @@
 var express = require('express'),
 mongoose = require('mongoose'),
-autoIncrement = require('mongoose-autoinc'),
+autoIncrement = require('mongoose-auto-increment'),
 md5 = require('js-md5'),
 
 fs = require('fs');

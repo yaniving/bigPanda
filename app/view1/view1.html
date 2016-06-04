@@ -2,13 +2,14 @@
 <div  id="box-wrapper-inner">
     <form ng-submit="submit()" class="form" id="box1">
         <div>
-            <input placeholder="Email" ng-model="form.email">
+            <input placeholder="Email" ng-model="form.email" type="email"
+                   ng-pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/" required>
         </div>
         <div>
-            <textarea placeholder="Message" ng-model="from.message"></textarea>
+            <textarea placeholder="Message" ng-model="from.message" required></textarea>
         </div>
         <div>
-            <input type="submit" id="submit" value="SUBMIT" class="submit" />
+            <input type="submit" id="submit" value="SUBMIT" class="submit" ng-disabled="myForm.$invalid"/>
         </div>
 
 
@@ -17,8 +18,8 @@
     <div id="box2">
         <input placeholder="Filter" ng-keyup="filter()" ng-model="filterText">
     </div>
-    <div id="box3">
-            <div ng-repeat="message in messages" class="comment-box">
+    <div id="box3" scroll-glue="glued">
+            <div ng-repeat="message in messages" class="comment-box" >
                 <span class="profile-img"><img ng-src="{{message.img}}"></span>
                 <span class="comment-msg">
                     <div ng-bind="message.email" class="email"></div>

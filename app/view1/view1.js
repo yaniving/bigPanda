@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.view1', ['ngRoute','luegg.directives'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
@@ -27,10 +27,19 @@ angular.module('myApp.view1', ['ngRoute'])
 
     $interval(function(){
 
-        $http.get("http://localhost:3001/messages/"+$scope.messages.length)
+        var currentId = $scope.messages[$scope.messages.length-1]._id;
+        $http.get("http://localhost:3001/messages/delta/"+currentId)
                     .then(function(res){
-                    if($scope.filterText == ""){
-                        $scope.messages = res.data;
+                    if($scope.filterText == "" && res.data.length > 0){
+
+                        var json = {"_id":res.data[0]._id,
+                                    "email":res.data[0].email,
+                                    "msg":res.data[0].msg,
+                                    "img":res.data[0].img,
+                                    "__v":res.data[0].__v
+                                    }
+
+                        $scope.messages.push(json);
                     }
                         console.log("success")
 
@@ -38,7 +47,7 @@ angular.module('myApp.view1', ['ngRoute'])
                         console.log("failure")
                         });
 
-    } , 1000000000);
+    } , 1000);
 
     $scope.submit = function () {
 
@@ -46,6 +55,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
     $http.post("http://localhost:3001/messages" , msg)
         .then(function(res){
+         $scope.messages.push(res.data);
             console.log("success");
 
         } , function(res){

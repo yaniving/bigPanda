@@ -25,7 +25,7 @@
     -webkit-box-flex: 9;
     -moz-box-flex: 9;
     box-flex: 9;
-    background-color: #B1ABAB;
+    background-color: #E6E6E6;
     width: auto;
     height: 170px; }
     #box-wrapper-inner #box1 .submit {
@@ -73,8 +73,9 @@
     -webkit-box-flex: 9;
     -moz-box-flex: 9;
     box-flex: 9;
-    height: 200px;
-    overflow-y: scroll; }
+    max-height: 200px;
+    overflow-y: scroll;
+    height: auto; }
     #box-wrapper-inner #box3 .comment-box {
       width: 250px;
       height: 60px;
@@ -94,58 +95,5 @@
           color: grey;
           float: left;
           padding-top: 3px; }
-
-/*
-
-.comment-view{
-    width : 300px;
-    text-align: center;
-    border: 1px solid #D0C6C6;
-    .form{
-        background-color:#B1ABAB;
-        width: 250px;
-        height: 155px;
-
-        button{
-            background-color:#4A4AFF;
-            color:#FFF;
-            float: right;
-            margin-right: 22px;
-            border: 0;
-            border-radius: 3px;
-            font-size: 12px;
-            padding: 4px 9px;
-        }
-
-        input , textarea{
-            width: 200px;
-            margin-top:10px;
-            margin-bottom:10px;
-
-           font-size: 12px;
-           line-height: 21px;
-        }
-    }
-
-    .feed{
-        width: 250px;
-        .filter{
-            margin-top:20px;
-
-            input{
-                width: 200px;
-                margin-top:10px;
-                margin-bottom:10px;
-
-                font-size: 12px;
-                line-height: 21px;
-            }
-        }
-
-
-
-
-    }
-}*/
 
 /*# sourceMappingURL=style.css.map */

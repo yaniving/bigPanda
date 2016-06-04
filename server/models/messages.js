@@ -1,8 +1,10 @@
 var mongoose = require('mongoose'),
-autoIncrement = require("mongodb-autoincrement");
+autoIncrement = require('mongoose-auto-increment'),
 Schema = mongoose.Schema;
 
 
+var connection = mongoose.createConnection("mongodb://localhost/angular-seed");
+autoIncrement.initialize(connection);
 
 var MessagesSchema = new Schema({
   id: Number,
@@ -10,5 +12,5 @@ var MessagesSchema = new Schema({
   msg: String,
   img : String
 });
-
+MessagesSchema.plugin(autoIncrement.plugin, 'Messages');
 mongoose.model('Messages', MessagesSchema);
